@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b2bab600-4ebf-49e2-b8e6-391652b6e945" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/cmd/bank/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/conf/conf.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/server/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/storage/interface.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/internal/storage/mem.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/models/model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/b_test.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="202uGtw28jyQrW3lpHxJDd4mlvU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.全局.GOPATH.is.expanded" value="true" />
+    <property name="configurable.模块.GOPATH.is.expanded" value="false" />
+    <property name="configurable.项目.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RunManager" selected="Go 测试.github.com/HuCuiGang/bank/test 中的 TestChannel">
+    <configuration name="github.com/HuCuiGang/bank/test 中的 TestBP" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="bank" />
+      <working_directory value="$PROJECT_DIR$/test" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/HuCuiGang/bank/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestBP\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/HuCuiGang/bank/test 中的 TestBP2" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="bank" />
+      <working_directory value="$PROJECT_DIR$/test" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/HuCuiGang/bank/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestBP2\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="github.com/HuCuiGang/bank/test 中的 TestChannel" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="bank" />
+      <working_directory value="$PROJECT_DIR$/test" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/HuCuiGang/bank/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <pattern value="^\QTestChannel\E$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go 测试.github.com/HuCuiGang/bank/test 中的 TestChannel" />
+        <item itemvalue="Go 测试.github.com/HuCuiGang/bank/test 中的 TestBP2" />
+        <item itemvalue="Go 测试.github.com/HuCuiGang/bank/test 中的 TestBP" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="113" key="FileChooserDialogImpl" timestamp="1635394161614">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="113" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1635394161614" />
+    <state width="1222" height="129" key="GridCell.Tab.0.bottom" timestamp="1635385699740">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1222" height="129" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635385699740" />
+    <state width="1222" height="129" key="GridCell.Tab.0.center" timestamp="1635385699739">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1222" height="129" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1635385699739" />
+    <state width="1222" height="129" key="GridCell.Tab.0.left" timestamp="1635385699739">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1222" height="129" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1635385699739" />
+    <state width="1222" height="129" key="GridCell.Tab.0.right" timestamp="1635385699739">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1222" height="129" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1635385699739" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1635255217268">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1635255217268" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1635256389327">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1635256389327" />
+  </component>
+</project>

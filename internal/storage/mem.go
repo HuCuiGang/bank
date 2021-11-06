@@ -35,7 +35,7 @@ func (m *Mem) SaveMoney(money float64 , userId string ) error {
 	if !ex{
 		return errors.New("user does not exist")
 	}
-	user.Money += money
+	user.Balance += money
 	m.Users[userId] = user
 
 	return nil
@@ -43,26 +43,26 @@ func (m *Mem) SaveMoney(money float64 , userId string ) error {
 
 func (m *Mem) WithdrawMoney(money float64,userId string ) error {
 	user, ex := m.Users[userId]
-	if !ex || user.Money - money<0  {
+	if !ex || user.Balance - money<0  {
 		return errors.New("sorry, your balance is insufficient")
 	}
-	user.Money -= money
+	user.Balance -= money
 	m.Users[userId]=user
 	return nil
 }
 
 func (m *Mem) Transfer(money float64 ,outUserId string ,inUserId string) error   {
 	outUser , ex := m.Users[outUserId]
-	if !ex || outUser.Money - money < 0  {
+	if !ex || outUser.Balance - money < 0  {
 		return errors.New("transfer failed")
 	}
 	inUser , ex := m.Users[inUserId]
 	if !ex {
 		return errors.New("transfer failed")
 	}
-	outUser.Money -= money
+	outUser.Balance -= money
 	m.Users[outUserId] = outUser
-	inUser.Money += money
+	inUser.Balance += money
 	m.Users[inUserId] = inUser
 	return nil
 

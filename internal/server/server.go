@@ -37,8 +37,8 @@ func (s *Server) Run() error {
 		loop:
 			for {
 				//查询用户信息
-				user,err = s.storage.QueryUser(user.Id)
-				if err!=nil {
+				user, err = s.storage.QueryUser(user.Id)
+				if err != nil {
 					fmt.Println(err)
 					break
 				}
@@ -92,21 +92,17 @@ func (s *Server) Run() error {
 			fmt.Println("请输入密码：")
 			fmt.Scanln(&password)
 			user := models.User{
-				Name:     name,
+				UserName: name,
 				Id:       "",
 				Password: password,
 			}
 
-			createUserId, err := s.storage.CreateUser(user)
+			createUserId, err := s.storage.CreateUser(&user)
 			if err != nil {
-				fmt.Println(err)
+				fmt.Println("注册失败，", err)
 				break
 			}
-			if err != nil {
-				fmt.Println("注册失败，",err)
-				break
-			}
-			fmt.Println("注册成功！ID为：",createUserId)
+			fmt.Println("注册成功！ID为：", createUserId)
 		default:
 			fmt.Println("fuckoff！输入错误，请重新输入！")
 		}
@@ -124,7 +120,7 @@ func Cli() {
 
 //登录后功能显示
 func Opshow(u models.User) {
-	fmt.Println(u.Name+"欢迎您！"+"您的账户id：", u.Id+"账户余额：", u.Balance)
+	fmt.Println(u.UserName+"欢迎您！"+"您的账户id：", u.Id+"账户余额：", u.Balance)
 	fmt.Println("存钱请按1")
 	fmt.Println("取钱请按2")
 	fmt.Println("转账请按3")

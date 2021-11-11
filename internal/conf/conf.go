@@ -20,7 +20,7 @@ type MySQLConfig struct {
 }
 
 func InitAppConfig() error {
-	file, err := ioutil.ReadFile("./configs/config.json")
+	file, err := ioutil.ReadFile("../../../configs/config.json")
 	if err != nil {
 		return err
 	}

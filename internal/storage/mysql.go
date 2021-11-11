@@ -24,8 +24,8 @@ func NewMySQLStorage(conf conf.MySQLConfig) (*MySQLStorage, error) {
 	return &MySQLStorage{db: db}, nil
 }
 
-func (m *MySQLStorage) CreateUser(user models.User) (int64,error) {
-	result, err := m.db.Exec("insert into user(name,password) value(?,?) ;", user.Name, user.Password)
+func (m *MySQLStorage) CreateUser(user *models.User) (int64,error) {
+	result, err := m.db.Exec("insert into user(name,password) value(?,?) ;", user.UserName, user.Password)
 	if err != nil {
 		return 0,err
 	}
@@ -36,7 +36,7 @@ func (m *MySQLStorage) CreateUser(user models.User) (int64,error) {
 func (m *MySQLStorage) LoginBank(userId string, password string) (models.User,error) {
 	var users []models.User
 
-	err := m.db.Select(&users, "select id ,name ,balance from user where id=? and password=? ;", userId, password)
+	err := m.db.Select(&users, "select id ,name ,balance, password from user where id=? and password=? ;", userId, password)
 	if err != nil {
 		return models.User{},err
 	}
@@ -52,6 +52,10 @@ func (m *MySQLStorage) SaveMoney(money float64, userID string) error {
 	err := m.db.Select(&users, "select balance from user where id=? ;",userID)
 	if err != nil {
 		return  err
+	}
+
+	if len(users) ==0  {
+		return errors.New("未查询到用户")
 	}
 
 	fmt.Println(users)
@@ -70,17 +74,20 @@ func (m *MySQLStorage) SaveMoney(money float64, userID string) error {
 }
 
 func (m *MySQLStorage) WithdrawMoney(money float64, userId string) error {
-	var user []models.User
+	var users []models.User
 
-	err := m.db.Select(&user, "select balance from user where id = ? ;", userId)
+	err := m.db.Select(&users, "select balance from user where id = ? ;", userId)
 	if err != nil {
 		return err
 	}
-	if user[0].Balance-money < 0 {
+	if len(users) ==0  {
+		return errors.New("未查询到用户")
+	}
+	if users[0].Balance-money < 0 {
 		return errors.New("余额不足")
 	}
 
-	balance := user[0].Balance - money
+	balance := users[0].Balance - money
 
 	m.db.Exec("update user set balance=? where id = ? ;", balance,userId)
 
@@ -94,6 +101,9 @@ func (m *MySQLStorage) Transfer(money float64, outUserId string, inUserId string
 	err := m.db.Select(&outuser, "select balance from user where id =? ;", outUserId)
 	if err != nil {
 		return err
+	}
+	if len(outuser) == 0 {
+		return errors.New("未查询到用户")
 	}
 	if outuser[0].Balance-money < 0 {
 		return errors.New("余额不足")
@@ -109,6 +119,9 @@ func (m *MySQLStorage) Transfer(money float64, outUserId string, inUserId string
 	err = m.db.Select(&inUser, "select balance from user where id = ? ;", inUserId)
 	if err != nil {
 		return err
+	}
+	if len(inUser) == 0 {
+		return errors.New("未查询到用户")
 	}
 
 	inUserbalance := inUser[0].Balance + money

@@ -8,8 +8,8 @@ package models
 //}
 
 type User struct {
-	Name     string  `db:"name"`
-	Id       string  `db:"id"`
-	Password string  `db:"password"`
-	Balance    float64 `db:"balance"`
+	UserName     string  `db:"name" json:"name"`
+	Id       string  `db:"id" json:"id"`
+	Password string  `db:"password" json:"password"`
+	Balance    float64 `db:"balance" json:"balance"`
 }
